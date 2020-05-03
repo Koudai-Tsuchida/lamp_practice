@@ -25,6 +25,7 @@
           </tr>
         </thead>
         <tbody>
+        <?php $cart  = &ez_sanitize($cart) { ?>
           <?php foreach($carts as $cart){ ?>
           <tr>
             <td><img src="<?php print(IMAGE_PATH . $cart['image']);?>" class="item_image"></td>
@@ -48,7 +49,7 @@
 
             </td>
           </tr>
-          <?php } ?>
+          <?php }} ?>
         </tbody>
       </table>
       <p class="text-right">合計金額: <?php print number_format($total_price); ?>円</p>
