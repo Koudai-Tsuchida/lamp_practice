@@ -25,8 +25,8 @@
           </tr>
         </thead>
         <tbody>
-        <?php $carts  = &ez_sanitize($carts); ?>
           <?php foreach($carts as $cart){ ?>
+          <?php $cart  = &ez_sanitize($cart); ?>
           <tr>
             <td><img src="<?php print(IMAGE_PATH . $cart['image']);?>" class="item_image"></td>
             <td><?php print($cart['name']); ?></td>
