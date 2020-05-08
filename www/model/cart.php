@@ -1,5 +1,7 @@
 <?php 
+// functions.phpから関数を取得
 require_once MODEL_PATH . 'functions.php';
+//db.phpから関数を取得
 require_once MODEL_PATH . 'db.php';
 
 function get_user_carts($db, $user_id){
