@@ -11,6 +11,10 @@ if(is_logined() === false){
   redirect_to(LOGIN_URL);
 }
 
+if(get_random_string() === ""){
+  set_error('不正なアクセスです。');
+}
+
 $db = get_db_connect();
 $user = get_login_user($db);
 

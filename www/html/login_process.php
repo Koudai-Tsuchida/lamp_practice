@@ -8,6 +8,9 @@ session_start();
 if(is_logined() === true){
   redirect_to(HOME_URL);
 }
+if($_SESSION['token'] !== $_POST['token']){
+  redirect_to(LOGIN_URL);
+}
 
 $name = get_post('name');
 $password = get_post('password');
